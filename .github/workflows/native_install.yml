@@ -44,7 +44,7 @@ jobs:
           echo -e "EDXAPP_LMS_BASE: '$(curl ipinfo.io/ip)'\nEDXAPP_CMS_BASE: '$(curl ipinfo.io/ip):18010'\nSANDBOX_ENABLE_DISCOVERY: true" > config.yml
           ls -l
       - name: Native Install
-        run: wget https://github.com/tinumide/configuration/blob/master/util/install/native.sh -O - | bash
+        run: wget https://raw.githubusercontent.com/tinumide/configuration/master/util/install/native.sh -O - | bash
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
