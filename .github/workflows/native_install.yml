@@ -34,10 +34,10 @@ jobs:
           sudo rm -rf /usr/local/lib/android
           df -h
       - name: Ansible Bootstrap
-        run: wget https://raw.githubusercontent.com/tinumide/configuration/master/util/install/ansible-bootstrap.sh -O - | sudo -E bash
+        run: wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/ansible-bootstrap.sh -O - | sudo -E bash
       - name: Generate passwords
         run: |
-          wget https://raw.githubusercontent.com/tinumide/configuration/master/util/install/generate-passwords.sh -O - | bash
+          wget https://raw.githubusercontent.com/edx/configuration/$OPENEDX_RELEASE/util/install/generate-passwords.sh -O - | bash
           ls -l
       - name: Create config.yml
         run: |
